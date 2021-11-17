@@ -1,29 +1,30 @@
 package com.kob.components;
 
-public class Customer {
-    private int customerId;
+public class Animal {
+    private int animalId;
     private String name;
-    private int age;
-    private String phoneNumber;
-    private String email;
+    private String biology;
+    private Boolean extra;
+    private String imageURL;
 
-    public Customer() {
+    public Animal() {
     }
 
-    public Customer(int customerId, String name, int age, String phoneNumber, String email) {
-        this.customerId = customerId;
+    public Animal(int animalId, String name,  String biology, Boolean extra, String imageURL) {
+        this.animalId = animalId;
         this.name = name;
-        this.age = age;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
+
+        this.biology = biology;
+        this.extra = extra;
+        this.imageURL = imageURL;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public int getAnimalId() {
+        return animalId;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setAnimalId(int animalId) {
+        this.animalId = animalId;
     }
 
     public String getName() {
@@ -34,38 +35,38 @@ public class Customer {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public String getBiology() {
+        return biology;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setBiology(String biology) {
+        this.biology = biology;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public Boolean getExtra() {
+        return extra;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setExtra(Boolean extra) {
+        this.extra = extra;
     }
 
-    public String getEmail() {
-        return email;
+    public String getImageURL() {
+        return imageURL;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setImageURl(String imageURL) {
+        this.imageURL = imageURL;
     }
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "customerId=" + customerId +
+        return "Animal{" +
+                "animalId=" + animalId +
                 ", name='" + name + '\'' +
-                ", age=" + age +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
+                ", biology=" + biology +
+                ", phoneNumber='" + extra + '\'' +
+                ", imageURL='" + imageURL + '\'' +
                 '}';
     }
 }
