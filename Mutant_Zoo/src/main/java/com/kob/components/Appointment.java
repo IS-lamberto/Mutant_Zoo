@@ -13,15 +13,17 @@ public class Appointment {
 	// Declare Instance Variables 
 	
 	private Customer customer;
+	private Animal animal;
 	private Experience experience;
 
 	public Appointment() {}
 
-	public Appointment(int appointmentId, LocalDateTime dateTime, boolean attendance, Customer customer, Experience experience) {
+	public Appointment(int appointmentId, LocalDateTime dateTime, boolean attendance, Customer customer, Animal animal, Experience experience) {
 		this.appointmentId = appointmentId;
 		this.dateTime = dateTime;
 		this.attendance = attendance;
 		this.customer = customer;
+		this.animal = animal;
 		this.experience = experience;
 	}
 
@@ -58,6 +60,14 @@ public class Appointment {
 
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
+	}
+
+	public Animal getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(Animal animal) {
+		this.animal = animal;
 	}
 
 	public Experience getExperience() {
