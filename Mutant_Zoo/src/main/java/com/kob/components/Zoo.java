@@ -2,7 +2,6 @@ package com.kob.components;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,8 +12,6 @@ public class Zoo {
     public Zoo(){setup();}
 
     private void setup() {
-        // Used to format the date and time output
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
         // Create and add first appointment
         LocalDateTime time1 = LocalDateTime.of(2021, 10, 8, 10, 30);
@@ -38,19 +35,19 @@ public class Zoo {
     public List<Appointment> getAppointments() { return this.appointments; }
 
     public Appointment getAppointmentById(int id) {
-        System.out.println("Zoo.getAppointment(" + id + ")");
-        List<Appointment> appointments = this.appointments.stream().collect(Collectors.toList());
-        for (Appointment appointment : appointments){
-            if(appointment.getAppointmentId() == id) {
-                return appointment;
+        Appointment output = null;
+        for (Appointment appointment : appointments) {
+            if (appointment.getAppointmentId() == id) {
+                output = appointment;
             } else {
-                return null;
+                output = null;
             }
         }
+        return output;
     }
 
     public void addAppointment(Appointment appointment) {
-        System.out.println("Bookshop.addBook(" + appointment + ")");
+        System.out.println("Zoo.addAppointment(" + appointment.getAppointmentId() + ")");
         if (!this.appointments.contains(appointment)) {
             this.appointments.add(appointment);
         }
