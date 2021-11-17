@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/John's Bits/07-jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/John's Bits/05-jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/John's Bits/09-selenium/pom.xml" />
+        <option value="$PROJECT_DIR$/John's Bits/02-book-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/John's Bits/01-bookshop-rest/pom.xml" />
+        <option value="$PROJECT_DIR$/John's Bits/03-graphql-service/pom.xml" />
+        <option value="$PROJECT_DIR$/John's Bits/08-data-repository/pom.xml" />
+        <option value="$PROJECT_DIR$/John's Bits/02-registry-service/pom.xml" />
+        <option value="$PROJECT_DIR$/John's Bits/02-shop-microservice/pom.xml" />
+        <option value="$PROJECT_DIR$/John's Bits/02-books-microservice/pom.xml" />
+        <option value="$PROJECT_DIR$/Mutant_Zoo/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="17" project-jdk-type="JavaSDK" />
+</project>

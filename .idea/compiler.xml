@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="07-jpa" />
+        <module name="05-jdbc" />
+        <module name="08-data-repository" />
+        <module name="02-shop-microservice (1)" />
+        <module name="mutant-zoo-service" />
+        <module name="02-book-domain" />
+        <module name="09-selenium" />
+        <module name="01-bookshop-rest" />
+        <module name="02-books-microservice" />
+        <module name="03-graphql-service" />
+        <module name="02-registry-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="01-bookshop-rest" target="11" />
+      <module name="02-book-domain" target="11" />
+      <module name="02-books-microservice" target="11" />
+      <module name="02-registry-service" target="11" />
+      <module name="02-shop-microservice" target="11" />
+      <module name="02-shop-microservice (1)" target="11" />
+      <module name="03-graphql-service" target="11" />
+      <module name="05-jdbc" target="11" />
+      <module name="07-jpa" target="11" />
+      <module name="08-data-repository" target="11" />
+      <module name="09-selenium" target="11" />
+      <module name="mutant-zoo-service" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="02-shop-microservice" options="-parameters" />
+      <module name="02-shop-microservice (1)" options="-parameters" />
+      <module name="mutant-zoo-service" options="-parameters" />
+    </option>
+  </component>
+</project>
