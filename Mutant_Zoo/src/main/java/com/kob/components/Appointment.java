@@ -1,13 +1,13 @@
 package com.kob.components;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 public class Appointment {
 	
 	// Declare Static variables
 	
 	private int appointmentId;
-	private LocalTime time;
+	private LocalDateTime dateTime;
 	private boolean attendance;
 
 	// Declare Instance Variables 
@@ -17,9 +17,9 @@ public class Appointment {
 
 	public Appointment() {}
 
-	public Appointment(int appointmentId, LocalTime time, boolean attendance, Customer customer, Experience experience) {
+	public Appointment(int appointmentId, LocalDateTime dateTime, boolean attendance, Customer customer, Experience experience) {
 		this.appointmentId = appointmentId;
-		this.time = time;
+		this.dateTime = dateTime;
 		this.attendance = attendance;
 		this.customer = customer;
 		this.experience = experience;
@@ -36,12 +36,12 @@ public class Appointment {
 		this.appointmentId = appointmentId;
 	}
 
-	public LocalTime getTime() {
-		return time;
+	public LocalDateTime getDateTime() {
+		return dateTime;
 	}
 
-	public void setTime(LocalTime time) {
-		this.time = time;
+	public void setTime(LocalDateTime dateTime) {
+		this.dateTime = dateTime;
 	}
 
 	public boolean getAttendance() {

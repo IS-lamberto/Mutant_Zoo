@@ -11,8 +11,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.jjh</groupId>
-    <artifactId>02-shop-microservice</artifactId>
+    <groupId>com.kob</groupId>
+    <artifactId>mutant-zoo-service</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
