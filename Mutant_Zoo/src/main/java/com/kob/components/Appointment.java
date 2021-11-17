@@ -1,6 +1,7 @@
 package com.kob.components;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Appointment {
 	
@@ -15,6 +16,9 @@ public class Appointment {
 	private Customer customer;
 	private Animal animal;
 	private Experience experience;
+
+	// Used to format the date and time output
+	DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
 	public Appointment() {}
 
@@ -78,4 +82,15 @@ public class Appointment {
 		this.experience = experience;
 	}
 
+	@Override
+	public String toString() {
+		return "Appointment{" +
+				"appointmentId=" + appointmentId +
+				", dateTime=" + timeFormatter.format(dateTime) +
+				", attendance=" + attendance +
+				", customer=" + customer +
+				", animal=" + animal +
+				", experience=" + experience +
+				'}';
+	}
 }
