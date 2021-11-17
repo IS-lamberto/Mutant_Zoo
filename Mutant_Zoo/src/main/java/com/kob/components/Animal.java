@@ -4,18 +4,17 @@ public class Animal {
     private int animalId;
     private String name;
     private String biology;
-    private Boolean extra;
     private String imageURL;
 
     public Animal() {
     }
 
-    public Animal(int animalId, String name,  String biology, Boolean extra, String imageURL) {
+    public Animal(int animalId, String name,  String biology, String imageURL) {
         this.animalId = animalId;
         this.name = name;
 
         this.biology = biology;
-        this.extra = extra;
+
         this.imageURL = imageURL;
     }
 
@@ -43,14 +42,6 @@ public class Animal {
         this.biology = biology;
     }
 
-    public Boolean getExtra() {
-        return extra;
-    }
-
-    public void setExtra(Boolean extra) {
-        this.extra = extra;
-    }
-
     public String getImageURL() {
         return imageURL;
     }
@@ -65,7 +56,6 @@ public class Animal {
                 "animalId=" + animalId +
                 ", name='" + name + '\'' +
                 ", biology=" + biology +
-                ", phoneNumber='" + extra + '\'' +
                 ", imageURL='" + imageURL + '\'' +
                 '}';
     }
