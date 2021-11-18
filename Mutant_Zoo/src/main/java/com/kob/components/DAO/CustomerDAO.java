@@ -1,5 +1,7 @@
-package com.kob.components;
+package com.kob.components.DAO;
 
+import com.kob.components.Customer;
+import com.kob.components.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

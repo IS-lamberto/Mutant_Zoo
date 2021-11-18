@@ -1,5 +1,7 @@
-package com.kob.components;
+package com.kob.components.DAO;
 
+import com.kob.components.Experience;
+import com.kob.components.repositories.ExperienceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

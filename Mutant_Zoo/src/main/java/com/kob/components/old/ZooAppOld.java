@@ -1,4 +1,9 @@
-package com.kob.components;
+package com.kob.components.old;
+
+import com.kob.components.Animal;
+import com.kob.components.Appointment;
+import com.kob.components.Customer;
+import com.kob.components.Experience;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;

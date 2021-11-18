@@ -1,5 +1,7 @@
-package com.kob.components;
+package com.kob.components.DAO;
 
+import com.kob.components.Animal;
+import com.kob.components.repositories.AnimalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
