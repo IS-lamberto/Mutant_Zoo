@@ -9,25 +9,25 @@ import org.springframework.stereotype.Component;
 public class ExperienceDAO {
 
     @Autowired
-    private ExperienceRepository repo;
+    private ExperienceRepository repo3;
 
     public Experience getExperienceById(int id) {
         System.out.printf("ExperienceDAO.getExperienceById(%s)\n", id);
-        return repo.findById(id).orElseGet(null);
+        return repo3.findById(id).orElseGet(null);
     }
 
     public Iterable<Experience> getAllExperiences() {
         System.out.println("ExperienceDAO.getAllExperiences()");
-        return repo.findAll();
+        return repo3.findAll();
     }
 
     public void saveExperience(Experience experience) {
         System.out.printf("ExperienceDAO.saveExperience(%s)\n", experience);
-        repo.save(experience);
+        repo3.save(experience);
     }
 
     public void deleteExperience(Experience experience) {
         System.out.printf("ExperienceDAO.deleteExperience(%s)\n", experience);
-        repo.delete(experience);
+        repo3.delete(experience);
     }
 }

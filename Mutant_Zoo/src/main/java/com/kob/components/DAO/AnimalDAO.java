@@ -11,10 +11,7 @@ public class AnimalDAO {
     @Autowired
     private AnimalRepository repo;
 
-    public Animal getAnimalById(int id) {
-        System.out.printf("AnimalDAO.getAnimalById(%s)\n", id);
-        return repo.findById(id).orElseGet(null);
-    }
+   
 
     public Iterable<Animal> getAllAnimals() {
         System.out.println("AnimalDAO.getAllAnimals()");

@@ -8,7 +8,7 @@ import javax.persistence.Table;
 @Table(name="t_animal")
 public class Animal {
     @Id
-    private int animalId;
+    
     private String name;
     private String biology;
     private String imageURL;
@@ -16,8 +16,8 @@ public class Animal {
     public Animal() {
     }
 
-    public Animal(int animalId, String name,  String biology, String imageURL) {
-        this.animalId = animalId;
+    public Animal( String name,  String biology, String imageURL) {
+        
         this.name = name;
 
         this.biology = biology;
@@ -25,13 +25,6 @@ public class Animal {
         this.imageURL = imageURL;
     }
 
-    public int getAnimalId() {
-        return animalId;
-    }
-
-    public void setAnimalId(int animalId) {
-        this.animalId = animalId;
-    }
 
     public String getName() {
         return name;
@@ -60,7 +53,6 @@ public class Animal {
     @Override
     public String toString() {
         return "Animal{" +
-                "animalId=" + animalId +
                 ", name='" + name + '\'' +
                 ", biology=" + biology +
                 ", imageURL='" + imageURL + '\'' +

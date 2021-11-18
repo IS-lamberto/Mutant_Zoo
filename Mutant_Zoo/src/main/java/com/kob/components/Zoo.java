@@ -39,10 +39,7 @@ public class Zoo {
         animalRepo.deleteAnimal(animal);
     }
 
-    public Animal getAnimalById(int id) {
-        return animalRepo.getAnimalById(id);
-    }
-
+   
     public List<Customer> getCustomer() {
         System.out.println("Zoo.getAllCustomer");
         Iterable<Customer> iterable = customerRepo.getAllCustomers();

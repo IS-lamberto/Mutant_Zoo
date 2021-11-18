@@ -9,26 +9,26 @@ import org.springframework.stereotype.Component;
 public class AppointmentDAO {
 
     @Autowired
-    private AppointmentRepository repo;
+    private AppointmentRepository repo2;
    
 
     public Appointment getAppointmentById(int id) {
         System.out.printf("AppointmentDAO.getAppointmentById(%s)\n", id);
-        return repo.findById(id).orElseGet(null);
+        return repo2.findById(id).orElseGet(null);
     }
 
     public Iterable<Appointment> getAllAppointments() {
         System.out.println("AppointmentDAO.getAllAppointments()");
-        return repo.findAll();
+        return repo2.findAll();
     }
 
     public void saveAppointment(Appointment appointment) {
         System.out.printf("AppointmentDAO.saveAppointment(%s)\n", appointment);
-        repo.save(appointment);
+        repo2.save(appointment);
     }
 
     public void deleteAppointment(Appointment appointment) {
         System.out.printf("AppointmentDAO.deleteAppointment(%s)\n", appointment);
-        repo.delete(appointment);
+        repo2.delete(appointment);
     }
 }

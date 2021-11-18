@@ -15,7 +15,8 @@ public class ZooApp {
 //        System.out.println("Setup finished");
 //
         Zoo zoo = context.getBean(Zoo.class);
-//
+        
+        
 //        Animal animal1 = new Animal(1,"Billy","Elephly","https://jackflacco.files.wordpress.com/2013/03/elephant-butterfly-by-saulinis.jpg");
 //        zoo.saveAnimal(animal1);
 //
@@ -38,7 +39,7 @@ public class ZooApp {
         LocalDateTime time1 = LocalDateTime.of(2021, 10, 8, 10, 30);
         // Customer customer1 = new Customer(1,"Owen Lambert", 23, "07925881888", "owen.lambert@informed.com");
         // zoo.saveCustomer(customer1);
-        Animal animal1 = new Animal(1,"Billy","Elephly","https://jackflacco.files.wordpress.com/2013/03/elephant-butterfly-by-saulinis.jpg");
+        Animal animal1 = new Animal("Billy","Elephly","https://jackflacco.files.wordpress.com/2013/03/elephant-butterfly-by-saulinis.jpg");
         zoo.saveAnimal(animal1);
         // Experience experience1 = new Experience(1, LocalTime.of(2,0),500,true,"Playtime with the Elephlies");
         // zoo.saveExperience(experience1);
