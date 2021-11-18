@@ -1,6 +1,13 @@
 package com.kob.components;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="t_animal")
 public class Animal {
+    @Id
     private int animalId;
     private String name;
     private String biology;
