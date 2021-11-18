@@ -2,7 +2,14 @@ package com.kob.components;
 
 import java.time.LocalTime;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="t_experience")
 public class Experience {
+    @Id
     private int experienceId;
     private LocalTime duration;
     private float cost;

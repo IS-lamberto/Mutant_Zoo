@@ -1,34 +1,39 @@
 package com.kob.components;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
+@Entity
+@Table(name="t_appointment")
 public class Appointment {
 	
 	// Declare Static variables
-	
+	@Id
 	private int appointmentId;
 	private LocalDateTime dateTime;
 	private boolean attendance;
 
 	// Declare Instance Variables 
 	
-	private Customer customer;
-	private Animal animal;
-	private Experience experience;
+	private int customerId;
+	private int animalId;
+	private int experienceId;
 
 	// Used to format the date and time output
-	DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+//	DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
 	public Appointment() {}
 
-	public Appointment(int appointmentId, LocalDateTime dateTime, boolean attendance, Customer customer, Animal animal, Experience experience) {
+	public Appointment(int appointmentId, LocalDateTime dateTime, boolean attendance, int customerId, int animalId, int experienceId) {
 		this.appointmentId = appointmentId;
 		this.dateTime = dateTime;
 		this.attendance = attendance;
-		this.customer = customer;
-		this.animal = animal;
-		this.experience = experience;
+		this.customerId = customerId;
+		this.animalId = animalId;
+		this.experienceId = experienceId;
 	}
 
 	
@@ -58,39 +63,39 @@ public class Appointment {
 		this.attendance = attendance;
 	}
 
-	public Customer getCustomer() {
-		return customer;
+	public int getCustomer() {
+		return customerId;
 	}
 
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
+	public void setCustomer(int customerId) {
+		this.customerId = customerId;
 	}
 
-	public Animal getAnimal() {
-		return animal;
+	public int getAnimal() {
+		return animalId;
 	}
 
-	public void setAnimal(Animal animal) {
-		this.animal = animal;
+	public void setAnimal(int animalId) {
+		this.animalId = animalId;
 	}
 
-	public Experience getExperience() {
-		return experience;
+	public int getExperience() {
+		return experienceId;
 	}
 
-	public void setExperience(Experience experience) {
-		this.experience = experience;
+	public void setExperience(int experienceId) {
+		this.experienceId = experienceId;
 	}
 
 	@Override
 	public String toString() {
 		return "Appointment{" +
 				"appointmentId=" + appointmentId +
-				", dateTime=" + timeFormatter.format(dateTime) +
+				//", dateTime=" + timeFormatter.format(dateTime) +
 				", attendance=" + attendance +
-				", customer=" + customer +
-				", animal=" + animal +
-				", experience=" + experience +
+				", customer=" + customerId +
+				", animal=" + animalId +
+				", experience=" + experienceId +
 				'}';
 	}
 }
