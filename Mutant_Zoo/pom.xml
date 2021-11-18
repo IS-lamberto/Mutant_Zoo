@@ -9,11 +9,11 @@
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.ol</groupId>
-    <artifactId>06-data-repository</artifactId>
+    <groupId>com.kob</groupId>
+    <artifactId>mutant-zoo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>Demo project for Spring Boot</description>
+    <name>mutant-zoo</name>
+    <description>Mutant Zoo Project</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -40,6 +40,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
