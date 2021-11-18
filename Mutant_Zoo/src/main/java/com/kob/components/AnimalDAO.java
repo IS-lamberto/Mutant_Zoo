@@ -25,7 +25,7 @@ public class AnimalDAO {
     }
 
     public void deleteAnimal(Animal animal) {
-        System.out.printf("BookDAO.deleteAnimal(%s)\n", animal);
+        System.out.printf("AnimalDAO.deleteAnimal(%s)\n", animal);
         repo.delete(animal);
     }
 }
