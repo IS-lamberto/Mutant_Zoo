@@ -1,52 +1,35 @@
 package com.kob.components;
 
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.List;
-import java.util.stream.Collectors;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
+@SpringBootApplication
 public class ZooApp {
-    public static void main(String[] args) {
+    public static void main(String [] args)  {
+        System.out.println("Starting Zoo setup");
+        ConfigurableApplicationContext context = SpringApplication.run(ZooApp.class, args);
+        System.out.println("Setup finished");
 
-        Zoo zoo = new Zoo();
+        Zoo zoo = context.getBean(Zoo.class);
 
-        System.out.println("=========================");
-        System.out.println("Get all appointments");
-        zoo.getAppointments().stream().forEach(b -> System.out.println(b));
+        Animal animal1 = new Animal(1,"Billy","Elephly","https://jackflacco.files.wordpress.com/2013/03/elephant-butterfly-by-saulinis.jpg");
+        zoo.saveAnimal(animal1);
 
-        // Create and add third appointment
-        LocalDateTime time3 = LocalDateTime.of(2022, 1, 5, 11, 0);
-        Customer customer3 = new Customer(3,"Keith Domnick", 24, "0781412345", "keith.domnick@informed.com");
+        Animal animal2 = new Animal(2,"Sammy","Sea-Rex","https://i.imgur.com/U7xmy4z.jpeg");
+        zoo.saveAnimal(animal2);
+
+        System.out.println(zoo.getAnimals());
+
         Animal animal3 = new Animal(3,"Bobby","Boa Hen-stricter","https://www.thesun.co.uk/wp-content/uploads/2020/02/NINTCHDBPICT000563675336.jpg");
-        Experience experience3 = new Experience(3, LocalTime.of(1,30),250,false,"Petting the Boa Hen-stricter");
+        zoo.saveAnimal(animal3);
 
-        Appointment appointment3 = new Appointment(3,time3,false,customer3,animal3,experience3);
-        System.out.println("=========================");
-        System.out.println("Add new appointment and get it by the ID");
-        zoo.addAppointment(appointment3);
+        Animal a3 = zoo.getAnimalById(3);
+        System.out.println(a3);
 
-        // Get new appointment
-        System.out.println(zoo.getAppointmentById(3));
-
-        // Update new appointment
-        LocalDateTime updatedTime3 = LocalDateTime.of(2022, 3, 10, 11, 0);
-        Customer updatedCustomer3 = new Customer(3,"Keith Domnick", 24, "0781412345", "keith.domnick@informed.com");
-        Animal updatedAnimal3 = new Animal(3,"Bobby","Boa Hen-stricter","https://www.thesun.co.uk/wp-content/uploads/2020/02/NINTCHDBPICT000563675336.jpg");
-        Experience updatedExperience3 = new Experience(3, LocalTime.of(1,30),250,true,"Petting the Boa Hen-stricter");
-
-        System.out.println("=========================");
-        System.out.println("Update the new appointment with a new time and extra");
-        Appointment updatedAppointment = new Appointment(3,updatedTime3, false, updatedCustomer3, updatedAnimal3, updatedExperience3);
-        zoo.updateAppointment(updatedAppointment);
-
-        // Delete new appointment
-        System.out.println("=========================");
-        System.out.println("Delete the newly updated appointment");
-        zoo.deleteAppointment(3);
-
-        // Get all appointments again
-        System.out.println("=========================");
-        System.out.println("Get all appointments one more time");
-        zoo.getAppointments().stream().forEach(b -> System.out.println(b));
+        zoo.deleteAnimal(a3);
+        System.out.println("==============");
+        System.out.println(zoo.getAnimals());
     }
 }
+
