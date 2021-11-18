@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class AnimalDAO {
 
     @Autowired
-    private ZooRepository repo;
+    private AnimalRepository repo;
 
     public Animal getAnimalById(int id) {
         System.out.printf("AnimalDAO.getAnimalById(%s)\n", id);
