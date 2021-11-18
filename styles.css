@@ -1,0 +1,15 @@
+header{
+    border-left: 30px solid olive;
+    border-top: 10px solid olive;
+    background-color: olive;
+    text-align: center;
+}
+
+img {
+    height: 30%;
+    width: 30%;
+}
+
+.content {
+  border: 30px solid white
+}

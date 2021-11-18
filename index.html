@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Booking Page</title>
+    <link rel='stylesheet' href='styles.css' />
+    <!-- here's bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div>
+    <header>
+        <h1>Welcome to the Mutant Zoo</h1>
+        <hr />
+    </header>
+
+
+    <div class="content">
+    <form>
+        Username: <input id='customer_username' required /><br /><br />
+        Date: <input type="date" /><br /><br />
+        Time: <input type="time" /><br /><br />
+        Animal: <select name="animals" id="animals">
+            <option value="sea-rex">Sea-Rex</option>
+            <option value="elephly">Elephly</option>
+            <option value="boa henstrictor">Boa Henstrictor</option>
+            <option value="banana ducks">Banana Ducks</option>
+            <option value="croctopus">Croctopus</option>
+            <option value="zebreo">Zebreo</option>
+        </select><br /><br />
+        Experience: <select name="experience" id="experience">
+        <option value="viewing">Viewing Platform</option>
+        <option value="feeding time">Feeding Time</option>
+        <option value="ride">Ride</option>
+        <option value="petting">Petting</option>
+        </select><br /><br />
+        <button id='btnGo'>Enter</button><br />
+    </form>
+    </div>
+
+    <hr />
+
+    <div class="content">
+    <article>
+        <h3>Animals</h3>
+        <ul>
+            <li><h4>Sea-Rex</h4><br />
+                <img src='https://cdn.pocket-lint.com/r/s/660x/assets/images/145762-apps-feature-bonkers-new-animals-imagined-with-the-power-of-photoshop-image10-cvlaf2h1jk-jpg.webp?v1' alt='Sea-Rex' title='Sea-Rex' />
+                <br />
+                <br />
+            </li>
+            <li><h4>Elephly</h4><br />
+                <img src='https://cdn.pocket-lint.com/r/s/660x/assets/images/145762-apps-feature-bonkers-new-animals-imagined-with-the-power-of-photoshop-image11-pcbaksfhr0-jpg.webp?v1' alt='Elephly' title='Elephly' />
+                <br />
+                <br />
+            </li>
+            <li><h4>Boa Henstrictor</h4><br />
+                <img src='https://cdn.pocket-lint.com/r/s/660x/assets/images/145762-apps-feature-bonkers-new-animals-imagined-with-the-power-of-photoshop-image26-ycia0uhwqs-jpg.webp?v1' alt='Boa Henstrictor' title='Boa Henstrictor' />
+                <br />
+                <br />
+            </li>
+            <li><h4>Banana Ducks</h4><br />
+                <img src='https://cdn.pocket-lint.com/r/s/660x/assets/images/145762-apps-feature-bonkers-new-animals-imagined-with-the-power-of-photoshop-image7-ymgf63efxz-jpg.webp?v1' alt='Banana Ducks' title='Banana Ducks' />
+                <br />
+                <br />
+            </li>
+            <li><h4>Croctopus</h4><br />
+                <img src='https://cdn.pocket-lint.com/r/s/660x/assets/images/145762-apps-feature-bonkers-new-animals-imagined-with-the-power-of-photoshop-image30-ahupjyc4xy-jpg.webp?v1' alt='Croctopus' title='Croctopus' />
+                <br />
+                <br />
+            </li>
+            <li><h4>Zebreo</h4><br />
+                <img src='https://cdn.pocket-lint.com/r/s/660x/assets/images/145762-apps-feature-bonkers-new-animals-imagined-with-the-power-of-photoshop-image1-bj9fzobdn4-jpg.webp?v1' alt='Zebreo' title='Zebreo' />
+                <br />
+                <br />
+            </li>
+        </ul>
+        </div>
+
+        <hr />
+
+    <div class="content">
+        <ul>
+            <h3>Experiences</h3><br />
+            <li><h4>Viewing Platform</h4></li>
+            <li><h4>Feeding Time</h4></li>
+            <li><h4>Ride</h4></li>
+            <li><h4>Petting</h4></li>
+        </ul>
+        </div>
+
+
+    <footer id='legaltext'>&copy;2021 read our legal notice</footer>
+    <!-- these days we tend to put script at the bottom of the page -->
+
+    </article>
+</div>
+</body>
+</html>
