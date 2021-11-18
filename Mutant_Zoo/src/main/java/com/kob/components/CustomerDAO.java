@@ -4,28 +4,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AnimalDAO {
+public class CustomerDAO {
 
     @Autowired
-    private ZooRepository repo;
+    private CustomerRepository repo;
+   
 
-    public Animal getAnimalById(int id) {
-        System.out.printf("AnimalDAO.getAnimalById(%s)\n", id);
+    public Customer getCustomerById(int id) {
+        System.out.printf("CustomerDAO.getCustomerById(%s)\n", id);
         return repo.findById(id).orElseGet(null);
     }
 
-    public Iterable<Animal> getAllAnimals() {
-        System.out.println("AnimalDAO.getAllAnimals()");
+    public Iterable<Customer> getAllCustomers() {
+        System.out.println("CustomerDAO.getAllCustomers()");
         return repo.findAll();
     }
 
-    public void saveAnimal(Animal animal) {
-        System.out.printf("AnimalDAO.saveAnimal(%s)\n", animal);
-        repo.save(animal);
+    public void saveCustomer(Customer customer) {
+        System.out.printf("CustomerDAO.saveCustomer(%s)\n", customer);
+        repo.save(customer);
     }
 
-    public void deleteAnimal(Animal animal) {
-        System.out.printf("BookDAO.deleteAnimal(%s)\n", animal);
-        repo.delete(animal);
+    public void deleteCustomer(Customer customer) {
+        System.out.printf("BookDAO.deleteCustomer(%s)\n", customer);
+        repo.delete(customer);
     }
 }
